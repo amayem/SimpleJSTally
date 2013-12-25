@@ -7,16 +7,25 @@
 		<script src="js/tally.js" type="text/javascript"><!--to make it work--></script>
 	</head>	    
 	<body>
-		<div id="title">Simple Tally</div>
+		<div id="title"><h1>Simple Tally</h1></div>
+		<div id="add_row_container">
+			<button onclick="addRow()">Add Row</button>
+		</div>
 		<table id="tally_table">
-			<tr>
-				<th>Name</th>
-				<th>Tally</th>
-			</tr>
-			<tr>
-				<td>something</td>
-				<td>3</td>
-			</tr>
+			<tbody id="tally_table_body">
+				<tr>
+					<th>Del</th>
+					<th>Name</th>
+					<th>Tally</th>
+					<th>Add</th>
+				</tr>
+				<tr id="tr_1">
+					<td><button onclick="addTally('tr_1_tally', -1)">-</button></td>
+					<td>something</td>
+					<td id="tr_1_tally">3</td>
+					<td><button onclick="addTally('tr_1_tally', 1)">+</button></td>
+				</tr>
+			</tbody>
 		</table>
 		<div id="add_row_container">
 			<button onclick="addRow()">Add Row</button>
